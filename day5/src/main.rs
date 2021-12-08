@@ -85,10 +85,7 @@ fn day2() {
                 } else {
                     (p2.y..p1.y + 1).rev().collect()
                 };
-                xs.iter()
-                    .zip(ys)
-                    .map(|(x, y)| (*x, y))
-                    .collect::<Vec<(u32, u32)>>()
+                xs.into_iter().zip(ys).collect::<Vec<(u32, u32)>>()
             }
         })
         .fold(HashMap::new(), |mut acc, (x, y)| {
